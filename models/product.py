@@ -1,9 +1,7 @@
 from openerp import api, fields, models
 
 class Product(models.Model):
-    _inherit = 'product.template'
+    _inherit = 'product'
 
-	state =fields.Boolean("State", default=True)
-	notes = fields.Char("Notes", required=True)
-	
-    
+	state = fields.Boolean('State', default=True)
+	notes = fields.Char('Notes')
