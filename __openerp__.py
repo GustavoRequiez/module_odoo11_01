@@ -2,7 +2,7 @@
     'name': 'First_module',
     'version': '1.0',
     'author': 'Gustavo',
-    'depends': ['product.template'
+    'depends': ['product'
     ],
     'data': [
         'views/product.xml',
