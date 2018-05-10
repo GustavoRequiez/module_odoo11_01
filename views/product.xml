@@ -1,29 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<odoo>
-		<Data>
-			<record model="ir.ui.view" id="product_form_view">
-				<field name="name">product.state</field>
-				<field name="model">product</field>
-				<field name="inherit_id" ref="product.product.form"/>
-				<field name="arch" type="xml">
-					<notebook position="inside">
-						<page string="Extras">
-							<group>
-								<field name="state"/>
-								<field name="notes"/>
-							</group>
-						</page>
-					</notebook>
-				</field>
-			</record>
-			
-			<record model="ir.actions.act_window" id="contact_list_action">
-				<field name="name">List</field>
-				<field name="res_model">product</field>
-				<field name="view_mode">tree,form</field>
-			</record>
-			
-			<menuitem id="main_product_menu" name="Product"/>
+<?xml version="1.0" encoding="UTF-8"?> 
+<odoo> 
+<!-- Comentario en la Views --> 
+     <record id="view_ej_Nota_producto_form" model="ir.ui.view"> 
+        <field name="name">product.form</field> 
+        <field name="model">product</field> 
+        <field name="arch" type="xml"> 
+            <form string="Listado de Producto"> 
+                <group> 
+                    <field name="nombre"/> 
+                </group> 
+            </form> 
+        </field> 
+    </record> 
 	
-		</Data>
-	</odoo>
+     <record id="view_ej_Nota_producto_tree" model="ir.ui.view"> 
+        <field name="name">product.tree</field> 
+        <field name="model">product</field> 
+        <field name="arch" type="xml"> 
+           <tree> 
+                    <field name="nombre"/>
+					<field name="state"/>
+					<field name="notes"/>
+           </tree> 
+        </field> 
+    </record> 
+	
+    <record model="ir.actions.act_window" id="act_ej_Nota_producto"> 
+        <field name="name">product</field> 
+        <field name="type">ir.actions.act_window</field> 
+        <field name="res_model">product</field> 
+        <field name="view_type">form</field> 
+        <field name="view_mode">tree,form</field> 
+    </record> 
+	
+<!--  Declaramos los menu --> 
+<menuitem id="product_menu" name="Nota_product" sequence="10"/> 
+<menuitem id="submenu_product_menu" name="product" sequence="10" parent="product_menu"/> 
+<menuitem id="submenu_product_action" name="product" sequence="10" parent="submenu_product_menu" action="act_product"/> 
+</odoo> 
