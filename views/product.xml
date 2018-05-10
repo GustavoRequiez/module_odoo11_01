@@ -34,7 +34,7 @@
     </record> 
 	
 <!--  Declaramos los menu --> 
-<menuitem id="product_menu" name="Nota_product" sequence="10"/> 
-<menuitem id="submenu_product_menu" name="product_" sequence="10" parent="product_menu"/> 
-<menuitem id="submenu_product_action" name="product_" sequence="10" parent="submenu_product_menu" action="act_product"/> 
+<menuitem id="product_menu" name="Nota_product" sequence="1"/> 
+<menuitem id="submenu_product_menu" name="product_" sequence="1" parent="product_menu"/> 
+<menuitem id="submenu_product_action" name="product_" sequence="1" parent="submenu_product_menu" action="act_product"/> 
 </odoo> 
