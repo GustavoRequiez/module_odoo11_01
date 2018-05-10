@@ -25,7 +25,7 @@
         </field> 
     </record> 
 	
-    <record model="ir.actions.act_window" id="act_ej_Nota_producto"> 
+    <record model="ir.actions.act_window" id="act_product"> 
         <field name="name">product</field> 
         <field name="type">ir.actions.act_window</field> 
         <field name="res_model">product</field> 
